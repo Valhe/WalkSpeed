@@ -1,0 +1,27 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Speed = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+
+Speed.Name = "Speed"
+Speed.Parent = ScreenGui
+Speed.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Speed.Position = UDim2.new(0.012422353, 0, 0.0105820298, 0)
+Speed.Size = UDim2.new(0, 79, 0, 28)
+Speed.Font = Enum.Font.SourceSans
+Speed.Text = "WalkSpeed"
+Speed.TextColor3 = Color3.fromRGB(0, 0, 0)
+Speed.TextSize = 13.000
+Speed.MouseButton1Down:Connect(function()
+	wait(1)
+	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100
+	wait(4)
+	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+end)
